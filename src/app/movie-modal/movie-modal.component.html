@@ -1,0 +1,17 @@
+<div class="backdrop"></div>
+<div class="movie-box">
+<div class="card bg-primary">
+    <img src="https://ui-avatars.com/api/?name={{selectedMovieDetails.title}}"
+     alt="...">
+    <hr>
+    <div class="card-body">
+        <h5 class="card-title movie-text title">{{selectedMovieDetails.title}}</h5>
+        <p class="movie-text genre">{{selectedMovieDetails.genres}}</p>
+        <p class="movie-text">{{selectedMovieDetails.description}}</p>
+    </div>
+    <div class="movie-box-actions">
+        <button type="button" class="btn btn-success" (click)="onCloseClick()">Close</button>
+    </div>
+</div>
+
+</div>

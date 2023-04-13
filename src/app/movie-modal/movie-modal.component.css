@@ -1,0 +1,44 @@
+.backdrop{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.75);
+    z-index: 50;
+}
+
+.movie-box{
+    position: fixed;
+    top: 2vh;
+    left: 28vw;
+    width: 39vw;
+    padding: 23px;
+    background: #fff;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.5);
+    z-index: 100;
+    font-size: 23px;
+}
+
+.movie-text{
+    text-align: center;
+    color: white;
+}
+
+.title{
+    color: black;
+    font-size: 30px;
+}
+
+.genre{
+    color: orangered;
+}
+
+img{
+    width: 50%;
+    margin-left: 208px;
+}
+
+.movie-box-actions{
+    text-align: end;
+}

@@ -1,0 +1,72 @@
+*{
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.movie-text{
+    text-align: center;
+    font-size: 23px;
+}
+
+.title{
+    color:black;
+    font-size:25px;
+}
+
+.genre{
+    color: skyblue;
+}
+
+.refresh-icon{
+    display: flex;
+    justify-content: center;
+    font-size: 200px;
+    color: green;
+    margin-top: 313px;
+}
+
+.refresh-text{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: -50px;
+}
+.search-box input{
+    width: 15%;
+    height: 50px;
+    margin: auto;
+    margin-left: 206px;
+    margin-top: 41px;
+    font-size: 25px;
+    border-radius: 17px;
+}
+
+.previousButton{
+    background-color: #04AA6D;
+    color: #ffffff;
+    border-color: #04AA6D;
+    width: 175px;
+    height: 62px;
+    font-size: 23px;
+    margin-top: 51px;
+    margin-left: 297px;
+}
+
+.nextButton{
+    background-color: #04AA6D;
+    color: #ffffff;
+    border-color: #04AA6D;
+    width: 175px;
+    height: 62px;
+    font-size: 23px;
+    margin-top: 51px;
+    margin-left: 1407px;
+}
+
+.box-shadow{
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+hr{
+    color: black;
+}

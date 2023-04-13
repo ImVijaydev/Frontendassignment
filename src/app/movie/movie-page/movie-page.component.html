@@ -1,0 +1,67 @@
+
+<div>
+    <app-movie-modal *ngIf="isMovieSelected" 
+    [selectedMovieDetails]="selectedMovieDetails"
+    (close)="isMovieSelected = false"></app-movie-modal>
+</div>
+
+<div *ngIf="isLoading" class="text-center my-4">
+    <app-loading-spinner></app-loading-spinner>
+</div>
+
+<div class="refresh-page" *ngIf="isApiFailed">
+    <span class="refresh-icon" (click)="onRefreshClick()"><fa-icon [icon]="faRefresh"></fa-icon></span>
+    <p class="refresh-text">Click here to Refresh</p>
+</div>
+
+<div class="container-fluid p-0 m-0" *ngIf="!isLoading&&!isApiFailed" style="background-color: black;">
+    <div class="search-box" [formGroup]="searchForm" >
+        <input type="text" formControlName="name" placeholder="search">
+    </div>
+    <div class="row mt-3 pt-2 px-2 py-5 text-white">
+        <div class="col-md-1"></div>
+        <div class="col-md-2 mt-2 mb-2" 
+        *ngFor="let movie of movieResults?.results.slice(0,5); let i=index"
+        (click)="onMovieClick(movie)">
+            <div class="card bg-danger box-shadow" 
+            *ngIf="searchText==='' || movie.title.toLowerCase().includes(searchText.toLowerCase())">
+                <img src="https://ui-avatars.com/api/?name={{movie.title}}&rounded=true"
+                class="card-img-top" alt="...">
+                <hr>
+                <div class="card-body">
+                    <h5 class="card-title movie-text title">{{movie.title}}</h5>
+                    <p class="movie-text genre">{{movie.genres}}</p>
+                    <p class="movie-text description">{{movie.description | shortenDescription}}</p>
+                </div>
+            </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <div class="row mt-3 pt-2 px-2 py-5 text-white">
+        <div class="col-md-1"></div>
+        <div class="col-md-2 mt-2 mb-2" 
+        *ngFor="let movie of movieResults?.results.slice(5,10); let i=index"
+        (click)="onMovieClick(movie)">
+            <div class="card bg-danger box-shadow" 
+            *ngIf="searchText==='' || movie.title.toLowerCase().includes(searchText)">
+                <img src="https://ui-avatars.com/api/?name={{movie.title}}&rounded=true"
+                class="card-img-top" alt="...">
+                <hr>
+                <div class="card-body">
+                    <h5 class="card-title movie-text title">{{movie.title}}</h5>
+                    <p class="movie-text genre">{{movie.genres}}</p>
+                    <p class="movie-text description">{{movie.description | shortenDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+
+        <div class="button-field">
+            <button type="button" class="previousButton" (click)="onPreviousPage()">Previous page</button>
+            <button type="button" class="nextButton" (click)="onNextPage()">Next Page</button>
+        </div>
+    </div>
+   </div>
+<div>
+</div>
+</div>

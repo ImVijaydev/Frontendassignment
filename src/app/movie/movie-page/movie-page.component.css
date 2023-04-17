@@ -5,12 +5,12 @@
 
 .movie-text{
     text-align: center;
-    font-size: 23px;
+    font-size: 16px;
 }
 
 .title{
     color:black;
-    font-size:25px;
+    font-size:19px;
 }
 
 .genre{
@@ -35,7 +35,7 @@
     width: 15%;
     height: 50px;
     margin: auto;
-    margin-left: 206px;
+    margin-left: 143px;
     margin-top: 41px;
     font-size: 25px;
     border-radius: 17px;
@@ -45,9 +45,9 @@
     background-color: #04AA6D;
     color: #ffffff;
     border-color: #04AA6D;
-    width: 175px;
-    height: 62px;
-    font-size: 23px;
+    width: 169px;
+    height: 49px;
+    font-size: 16px;
     margin-top: 51px;
     margin-left: 297px;
 }
@@ -56,10 +56,9 @@
     background-color: #04AA6D;
     color: #ffffff;
     border-color: #04AA6D;
-    width: 175px;
-    height: 62px;
-    font-size: 23px;
-    margin-top: 51px;
+    width: 169px;
+    height: 49px;
+    font-size: 16px;
     margin-left: 1407px;
 }
 
